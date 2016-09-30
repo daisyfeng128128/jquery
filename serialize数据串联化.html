@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	console.log($("form input").serialize()); //字符串
+	//a=1&b=2&c=3  数据串联化
+	console.log($("form input").serializeArray());
+	
+
+});
+</script>
+</head>
+
+<body>
+<form>
+	<input type="text" name="a" value="1"/>
+	<input type="text" name="b" value="2"/>
+	<input type="text" name="c" value="3"/>
+</form>
+</body>
+</html>

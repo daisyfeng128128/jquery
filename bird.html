@@ -1,0 +1,76 @@
+<html lang="zn-cn"><head><script src="http://pagead2.googlesyndication.com/pub-config/r20160212/ca-pub-0608155192548477.js"></script><script src="//hm.baidu.com/hm.js?3088a94e3b69516f6df1098fc49847c9"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jQuery Ajax Pagiation - jPages</title>
+  <meta name="keywords" content="jquery, pagination, javascript, plugin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/jPages.css">
+  <link rel="stylesheet" href="assets/animate.css">
+  <link rel="stylesheet" href="assets/github.css">
+  <link rel="stylesheet" href="http://www.yyyweb.com/demo/common/init.css">
+  <style type="text/css">
+    body{
+      background:#555;
+    }
+  </style>
+  <script src="http://cdn.gbtags.com/EaselJS/0.7.1/easeljs.min.js"></script>
+  <script type="text/javascript">
+  	var particleStage; 
+var particleImage; 
+var particles = [];
+var emitterPoint = new createjs.Point(175, 250);
+
+window.addEventListener("load", initParticles, false);
+
+function initParticles() {
+  particleStage = new createjs.Stage(document.getElementById("myCanvas"));
+  startParticles();
+  
+}
+
+function startParticles() {
+  particleImage = new Image();
+  particleImage.src = "http://www.gbtags.com/gb/networks/uploadimg/e884fca9-48a6-4b50-9a40-3899dd0cdaba.png";  
+  createjs.Ticker.addEventListener("tick", particleTick);
+}
+
+function particleTick() {
+  if (particles.length < 25) {
+    var p = new createjs.Bitmap(particleImage);
+    p.regX = 180;
+    p.regY = 280;
+    particleStage.addChild(p);
+    initParticle(p);
+    particles.push(p);
+  }
+  
+  for(var i = 0, l = particles.length; i < l; i++) {
+    var p = particles[i];
+    p.x += p.vx;
+    p.y += p.vy;
+    p.alpha *= 0.95;
+    p.rotation = Math.atan2(p.vy, p.vx) * 180/Math.PI + 180;
+    if (p.y > 420 || p.alpha < 0.01) {
+      initParticle(p);
+    }
+  }
+  particleStage.update();
+}
+
+function initParticle(p) {
+  p.x = emitterPoint.x; p.y = emitterPoint.y;
+  p.vx = Math.random() * 30 - 15;
+  p.vy = Math.random() * -20;
+  p.alpha = 1;
+  p.scaleX = p.scaleY = 0.3;
+}
+
+
+  </script>
+</head>
+<body>
+<canvas id="myCanvas" width="350" height="420"></canvas>   
+
+</body>
+</html>

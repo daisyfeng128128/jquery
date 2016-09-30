@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>c3圆环倒计时效果</title>
+<style>
+.pie{
+	width:200px; height:200px; background-color:blue;
+	border-radius:100px;
+	position:absolute;	
+}
+.pie{clip:rect(0,200px,200px,100px);}  /*所有主流浏览器都支持clip属性，clip属性剪裁绝对定位元素*/
+.pie2{
+	clip:rect(0,100px,200px,0);
+}
+.hold{
+	width:200px; height:200px; background:#ccc;
+	position:absolute;
+}
+.hold1{clip:rect(0,200px,200px,100px);	}
+.hold2{clip:rect(0,100px,200px,0);	}
+</style>
+<script src="jquery-1.12.2.min.js"></script>
+<script>
+var i=0;
+var j=0;
+function start1(){
+	i=i+0.6;
+	var count=count+1;
+	if(count>=300){
+		count = 0;
+		clearInterval(t1);
+		var t2 = setInterval("start2()",100);
+	}
+	$(".pie1").css("-o-transform","rotate("+i+"deg)");
+	$(".pie1").css("-moz-transform","rotate("+i+"deg)");
+	$(".pie1").css("-webkit-transform","rotate("+i+"deg)");
+}
+function start2(){
+	j=j+0.6;
+	var count=count+1;
+	if(count>=300){
+		count = 0;
+		clearInterval(t2);
+		var t1 = setInterval("start1()",100);
+	}
+	$(".pie2").css("-o-transform","rotate("+i+"deg)");
+	$(".pie2").css("-moz-transform","rotate("+i+"deg)");
+	$(".pie2").css("-webkit-transform","rotate("+i+"deg)");
+}
+var t1=setInterval("start1()",100);
+
+</script>
+</head>
+
+<body>
+	<div class="hold hold1">
+    	<div class="pie pie1"></div>
+    </div>
+    <div class="hold hold2">
+    	<div class="pie pie2"></div>
+    </div>
+    <!--查看源码-->
+	<input onclick="window.open('view-source:' + window.location.href)" type="button" value="查看源代码" style="position:absolute; right:0; top:0; width:80px; height:30px;">
+</body>
+</html>

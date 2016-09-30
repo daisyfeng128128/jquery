@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0; }
+.table{border:1px solid #ddd; }
+.table tr{border-bottom:1px solid red; }
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	var aImg=["icon_caiwu","icon_renshi","icon_zhibo","icon_pingtai","icon_liucheng","icon_geren","icon_shezhi"];
+	$(".one-li .bechange").each(function(i,item){
+		$(".leftBg").eq(i).css("background","url(/oa/views/images/"+aImg[i]+".png) no-repeat");
+	});
+	
+	var arr=["转正评语:asdasd","<br>","延长试用期原因:asdasdasd","<br>","转正原因"];
+	var s=(arr.join(","));
+	console.log(s)
+
+	
+	
+	/*arr.each(function(i,item){
+		$(".table").appendTo("<tr>"+arr[i]+"</tr>");
+	})*/
+	
+	
+
+
+
+});
+</script>
+</head>
+<body>
+	<table class="table">
+        <input type="hidden" id="id">
+        <input type="hidden" id="type">
+        <!--<tr id="apply_lo">
+        </tr-->
+    </table>
+</body>
+</html>

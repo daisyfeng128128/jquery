@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.red{background-color: red; }
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	$(".searchAll").click(function() {
+			var $chuangkou = $("#sousuo");
+			$.basewindow("高级搜索", $chuangkou, 400, 200);
+			aCon.wrapAll("<div></div>");
+			$chuangkou.css({"display" : "block"}); 
+	})
+
+	$("body").prepend("<div class='basewindow'>\
+						  <div class="bg83">\
+							<a class='basewindowout'>&times;</a>\
+							<div class='clear'></div>\
+							<p class='p0'>"+title+"</p>\
+						  </div>\
+						</div>\
+						<div class='zhezhao-basewindow'></div>");
+	
+	
+});
+</script>
+</head>
+
+<body>
+	<input type="button" class="searchAll" value="按钮" name=""/>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	*{margin:0; padding: 0; list-style: none; }
+	span{width: 18px; height: 18px; display: block; }
+</style>
+<script src="jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	$("input").click(function(){
+		$("li").each(function(){
+			alert($(this).text())
+		})
+	})
+
+})
+</script>
+</head>
+
+<body>
+	<input type="button" value="输出每个列表项的值" name="">	
+	<ul>
+		<li>咖啡</li>
+		<li>牛奶</li>
+		<li>苏打</li>
+	</ul>
+
+</body>
+</body>
+</html>

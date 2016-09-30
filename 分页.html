@@ -1,0 +1,70 @@
+<html lang="zn-cn"><head><script src="http://pagead2.googlesyndication.com/pub-config/r20160212/ca-pub-0608155192548477.js"></script><script src="//hm.baidu.com/hm.js?3088a94e3b69516f6df1098fc49847c9"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jQuery Ajax Pagiation - jPages</title>
+  <meta name="keywords" content="jquery, pagination, javascript, plugin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/jPages.css">
+  <link rel="stylesheet" href="assets/animate.css">
+  <link rel="stylesheet" href="assets/github.css">
+  <link rel="stylesheet" href="http://www.yyyweb.com/demo/common/init.css">
+  <style type="text/css">
+  .holder {
+    margin: 15px 0;
+  }
+  .holder a {
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #fff;
+  }
+  .holder a:hover {
+    background-color: #eee;
+    color: #fff;
+  }
+  .holder a.jp-previous { margin-right: 15px; }
+  .holder a.jp-next { margin-left: 15px; }
+  .holder a.jp-current, a.jp-current:hover {
+    color: #FF4242;
+    font-weight: bold;
+  }
+  .holder a.jp-disabled, a.jp-disabled:hover {
+    color: #eee;
+  }
+  .holder a.jp-current, a.jp-current:hover,
+  .holder a.jp-disabled, a.jp-disabled:hover {
+    cursor: default;
+    background: none;
+  }
+  .holder span { margin: 0 5px; }
+  div#content {
+  	width: 700px;
+  }
+  div#container {
+  	width: 730px;
+  	margin: 100px auto;
+  }
+  body {
+  	background: #333;
+  	color: #eee;
+  }
+  </style>  
+  <script type="text/javascript">
+  	$('.pagination').jqPagination({
+    paged: function(page) {
+        // do something with the page variable
+    }
+});
+  </script>
+</head>
+<body>
+<div class="pagination">
+    <a href="#" class="first" data-action="first">&laquo;</a>
+    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+    <input type="text" readonly="readonly" data-max-page="40" />
+    <a href="#" class="next" data-action="next">&rsaquo;</a>
+    <a href="#" class="last" data-action="last">&raquo;</a>
+</div>
+</body>
+</html>

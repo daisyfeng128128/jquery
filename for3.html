@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>for</title>
+<style>
+*{ margin:0; padding:0; list-style:none; }
+td{border: 1px solid red; padding: 6px; }
+</style>
+<script src="jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	var arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+	for (var i = 0; i < arr.length-1; i++) {
+		if(i%9==0){
+			$("<tr></tr>").appendTo("table");
+			$("<td></td>").appendTo("table tr");
+			$("<td></td>").html(arr[0])
+		}else{
+			$("<td></td>").appendTo("table tr");
+			$("table tr td").each(function(j,item){
+				$("td").eq(j).html(arr[j]);
+			})
+		}
+		
+	}
+
+	//  	var index = 0;
+	//     var totalNum = arr.length;
+	//     var PERROW = 9;
+	//     var result =　"";
+	//     var preTr = "<tr>";
+	//     var endTr = "</tr>";
+	//     var tdStr = "<td></td>";
+	//     for(index = 1 ; index <= totalNum; index ++){
+	//     	if(1 == index){
+	//    			result += preTr;
+	//    		}
+	    	
+	//     	result += tdStr.replace("{0}", data.data[index-1]);
+	    	
+	//     	if(0 == index % PERROW){
+	//    			result += endTr;
+	//    			if(index != totalNum){
+	//    				result += preTr;
+	//    			}
+	//     	}
+	    	
+	//     	if(index == totalNum){
+	//     		result += endTr;
+	//     	}
+	//     }
+	//     $(result).appendTo("#showNchoice .table1");
+	// }
+})
+	
+
+	
+</script>
+</head>
+
+<body>
+<table></table>
+</body>
+</html>

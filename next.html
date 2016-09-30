@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	// $("#li1").next().css("background","red")//下面的一个兄弟
+	$("#li1").nextAll().css("background","red")
+	//下面的所有兄弟
+	//$("#li1").nextAll(".box").css("background","red")
+	//$("#li1").nextUntil(".daole").css("background","red")
+	// 同样括号里的参数也有筛选功能
+
+
+});
+</script>
+</head>
+
+<body>
+<ul>
+	<li></li>
+	<li id="li1"></li>
+	<li></li>
+	<li class="box"></li>
+	<li></li>
+	<li class="daole">daole</li>
+	<li></li>
+</ul>
+</body>
+</html>

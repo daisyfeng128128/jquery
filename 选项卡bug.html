@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	$(".finanHd .tBtn").click(function(){
+		$(".finanHd").find(".tBtn").removeClass("spanchange");
+		$(this).addClass("spanchange");
+		$("#finanTab").find("div").removeClass("cur");
+		$("#finanTab").find("div").eq($(this).index()).addClass("cur");
+	})
+
+
+
+})
+
+
+</script>
+<style>
+.right-two .tBtn {
+	height: 34px;
+	line-height: 34px;
+	padding: 0px 10px;
+	border-bottom: 0;
+	display: inline-block;
+	border-radius: 5px 5px 0px 0px;
+	cursor: pointer;
+	border:1px solid #9a9a9a; 
+	color:#333;
+}
+
+.right-two .spanchange {
+	background-color: #31383d;
+	color:#fff;
+}
+
+#finanTab div{
+	display:none;
+}
+#finanTab div.cur{
+	display:block;
+}
+
+</style>
+</head>
+
+<body>
+<div class="right-two finanHd">
+    <a href="javascript:;" class="spanchange tBtn">公司盈利总计</a>
+    <a href="javascript:;" class="tBtn">平台应收概况表</a>
+    <a href="javascript:;" class="tBtn">平台大型支出表</a>
+</div>
+<div style="overflow:auto;" id="finanTab">
+	<div class="profit cur">
+        <table class="table" style="margin-bottom:10px; ">
+           <tr>
+                <th style="width:1%">本月收款总额</th>
+                <th style="width:1%">本月支出总计</th>
+                <th style="width:1%">本月净利润</th>
+                <th style="width:1%">上月净利润</th>
+                <th style="width:1%">环比增长</th>
+            </tr>
+            <tr>
+                <td id="currentIncome" style="width:1%"><input id="id" type="hidden" /></td>
+                <td id="currentExpenditure" class="total_click" style="width:1%"></td>
+                <td id="currentProfit" style="width:1%"></td>
+                <td id="lastProfit" style="width:1%"></td>
+                <td id="cp_growthRate" style="width:1%"></td>
+            </tr>
+        </table>
+     </div>         
+	<div class="thistable custom-scroll income" style="overflow:auto; ">
+        <table id="searchTable" class="table tablelist">
+            <tr class="firsttr">
+                <th w_index="id" w_align="center" width="1%;" w_hidden="true">id</th>
+                <th w_num="line" w_align="center" width="1%;">序号</th>
+                <th w_index="platforms" w_align="center" width="1%;">平台</th>
+                <th w_index="bgIncome" w_align="center" width="1%;">后台收入</th>
+                <th w_index="genre" w_align="center" width="1%;">收入类型</th>
+                <th w_index="taxSubsidy" w_align="center" width="1%;">税点补贴</th>
+                <th w_index="receivable" w_align="center" width="1%;">平台应收款</th>
+                <th w_index="onlineTotal" w_align="center" width="1%;">线上主播合计</th>
+                <th w_index="offlineTotal" w_align="center" width="1%;">线下主播合计</th>
+                <th w_index="otherIncome" w_align="center" width="1%;">其他收入</th>
+                <th w_index="incomeTotal" w_align="center" width="1%;">应收合计</th>
+                <th w_index="outlayTotal" w_align="center" width="1%;">支出合计</th>
+                <th w_index="netProfit" w_align="center" width="1%;">平台毛利润</th>
+                <th w_index="remarks" w_align="center">备注</th>
+            </tr>
+        </table>
+    </div>
+	<div class="expend">
+        <table id="gdTable" class="table tablelist expend">
+            <tr class="firsttr">
+                <th w_index="id" w_align="center" width="1%;" w_hidden="true">id</th>
+                <th w_num="line" w_align="center" width="1%;">序号</th>
+                <th w_index="platforms" w_align="center" width="1%;">平台</th>
+                <th w_index="chIncome" w_align="center" width="1%;">频道应收</th>
+                <th w_index="chOutlay" w_align="center" width="1%;">频道支出</th>
+                <th w_index="remarks" w_align="center">备注</th>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

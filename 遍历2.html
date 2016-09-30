@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#box div{width:100px; height:100px; margin:10px; border:1px solid blue; float:left; }
+.blue{background:blue; }
+</style>
+</head>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function(){
+	alert($("#box").children().eq(1).html());
+})
+	
+
+</script>
+<body>
+  <div id="box">
+  	<div></div>
+  	<div>1</div>
+  	<div></div>
+
+  	<div></div>
+  	<div></div>
+  	<div></div>
+  
+  </div>
+</body>
+</html>

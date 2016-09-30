@@ -1,0 +1,24 @@
+1 <!DOCTYPE html>
+ 2 <html>
+ 3     <head>
+ 5         <script src="jquery-1.10.1.min.js" type="text/javascript"></script>
+ 6         <script type="text/javascript">
+ 7         $(document).ready(function(){
+ 8           $('#qr_gen').click(function() 
+ 9           {
+10             $('#qr_container').qrcode({render:"canvas",height:120, width:120,correctLevel:0,text:$('#qr_link').val()}); 
+11           });
+12         });
+13         </script>
+14     </head>
+15     <body>
+16         <h1>QR CODER</h1>
+17         <div>
+18             <label for="qr_link">URL:</label>      
+19             <input id="qr_link" type="text" value="I am going to be a quick response code." style="width:450px;" /> 
+20             <button id="qr_gen" value="Generate">Generate</button> <br />
+21         </div>
+22         <div id="qr_container" style="margin:auto; position:relative;"></div>
+23         </div>
+24     </body>
+25 </html>

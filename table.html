@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#b{display: none; }
+td{border:1px solid #ccc; }
+
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function(){
+	$("#btn").click(function(){
+		$("#b").show().html('jasj foifaoirhfdjhgkjdfhgkafdghaldihgkj')
+	});
+})
+</script>
+</head>
+
+<body>
+<input type="button" value="按钮" id="btn" name="">
+<table id="t">
+	<tr>
+    	<td class="a">aaa</td>
+        <td id="b" style="word-wrap:break-word;word-break:break-all;width:50px; "></td>
+    </tr>
+
+</table>
+</body>
+</html>

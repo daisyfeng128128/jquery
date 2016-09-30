@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	// $("div").appendTo($("span"))	//jq
+	// $("span").get(0).appendChild($("div").get(0)) //原生
+	$("div").click(function(){
+		alert(123)
+	})
+	$("div").clone(true).appendTo($("span")) //clone出来原先的事件没被克隆出来，当传参true时，事件被克隆出来	
+
+});
+</script>
+</head>
+
+<body>
+<div>div</div>
+<span>span</span>
+</body>
+</html>

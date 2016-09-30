@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	*{margin:0; padding: 0; list-style: none; }
+	ul li{padding: 20px; float: left; }
+	.c{width: 50px; height: 50px; background-color: #f0f; position: absolute; opacity: .5; }
+</style>
+<script src="jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	$("ul li").mouseenter(function(e){
+		$('.c').animate({'left':e.pageX},"fast");
+		console.log(e.pageX);
+	})
+	
+
+})
+</script>
+</head>
+
+<body>
+<ul class="clear">
+	<li class="fl">aaa</li>
+	<li class="fl">bbb</li>
+	<li class="fl">ccc</li>
+	<li class="fl">ddd</li>
+	<li class="fl">eee</li>
+</ul>
+<div class="c"></div>
+</body>
+</body>
+</html>

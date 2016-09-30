@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title> jquery 字符串切割 函数 用法</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="jquery-1.7.2.js"></script>
+<script LANGUAGE="JavaScript">
+function sclip () {
+	if($("#txt1").val().length > 6) {
+	 $("#txt2").val($("#txt1").val().substring(0,6));
+	}else {
+	 $("#txt2").val($("#txt1").val());
+	}
+
+}
+
+</script>
+</head>
+<input type="text" id="txt1" />
+<input type="text" id="txt2" />
+<input type="button" onClick="sclip();" value="do it ..."/>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	div{
+		width:100px;
+		height: 100px;
+		background-color: red;
+	}
+	#div2{margin-top: 10px; }
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	$("#div1").click(function(){
+		$(this).animate({width:300},1000,"linear").animate({height:300},1000)
+	
+	})
+
+	$("#div2").click(function(){
+		$("#div1").stop(true,true);	//默认：只会阻止当前运动
+	})
+	
+	
+
+});
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: red; 
+		position: absolute;
+		left:0;
+		top: 0;
+	}
+</style>
+<script src="jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	$("#div").drag();
+
+})
+
+$.fn.extend({
+		drag:function(){
+			var disX=disY=0;
+			var This=this;
+			this.mousedown(function(ev){
+				disX=ev.pageX-$(this).offset().left;
+				disY=ev.pageY-$(this).offset().top;
+
+				$(document).mousemove(function(ev){
+					var l=ev.pageX-disX;
+					var t=ev.pageY-disY;
+
+					if(l<20){
+						l=0;
+					}else{
+						This.css("left",l);
+					}
+
+					if(t<20){
+						t=0;
+					}else{
+						This.css("top",ev.pageY-disY);
+					}
+				});
+
+				$(document).mouseup(function(){
+					$(this).off();
+				})
+
+				return false;
+
+			});
+		}
+	});
+</script>
+</head>
+
+<body>
+<div id="div"></div>
+</body>
+</body>
+</html>

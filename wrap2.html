@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.red{background-color: red; }
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	var a=$(".p").add(".a").add(".i");
+	$(".btn1").click(function(){
+	    a.wrapAll("<div></div>").addClass("red");
+	});
+	
+	
+});
+</script>
+</head>
+
+<body>
+	<div class="box">
+		<p class="p">This is a paragraph.</p>
+		<a class="a">This is another paragraph.</a>
+		<i class="i">iiiiiiiii</i>
+
+	</div>
+	<button class="btn1">用 div 包裹每个段落</button>
+</body>
+</html>

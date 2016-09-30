@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	// $("span").parents("body").css("background","red");
+	// $("span").parentsUntil("#b").css("background","red");
+	// parents()所选元素的祖节点，括号里的是筛选参数
+	// $("span").closest("body").css("background","red"); //必须要写参数,获取最近的祖节点，包括自身
+	$("span").closest("span").css("background","red");
+
+});
+</script>
+</head>
+
+<body id="b">
+<div id="d">div1<span id="big"><span id="s">span</span></span></div>
+</body>
+</html>

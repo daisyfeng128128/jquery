@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	// $("span").wrap("<p>") //包装 此时一定是带尖头的p	
+	// $("span").wrapAll("<p>")	//整体包装
+	// $("span").wrapInner("<b>") //内部包装
+	$("span").unwrap()	//删除父级不包括body，故原样
+
+});
+</script>
+</head>
+
+<body>
+<span>span</span>
+<span>span</span>
+<i>i</i>
+<span>span</span>
+<div><span id="unwrap">span</span></div>
+</body>
+</html>

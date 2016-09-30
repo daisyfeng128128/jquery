@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{background: url(r_week_nos.png) no-repeat; width: 91px; height: 33px; cursor: pointer; }
+</style>
+</head>
+<script src="jquery-1.7.2.js"></script>
+<script>
+	$(function(){
+		$("div").on("click",function(){
+			$("div").animate({
+					"margin-left" : 100
+				}, 300);
+		})
+	})
+
+
+</script>
+<body>
+  <div></div>
+</body>
+</html>

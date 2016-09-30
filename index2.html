@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+span{
+  color:red;
+}
+
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn").click(function(){
+    $("span").text($(".qian").index());
+  })
+});
+</script>
+</head>
+
+<body>
+	<div>
+  <ul>
+    <li>后台专区</li>
+    <li class="qian">前台专区</li>
+    <li>数据库专区</li>
+    <li>站长交流</li>
+  </ul>
+</div>
+<div>当前li元素的位置:<span>0</span></div>
+<button id="btn">点击查看结果</button>
+</body>
+</html>
