@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	$("#a").click(function(){
+		if(window.navigator.userAgent.toLowerCase().indexOf('chrome') != -1){
+	alert('谷歌');
+	window.location.href="/www.jd.com"
+}else if(window.navigator.userAgent.toLowerCase().indexOf('msie') != -1){
+	alert('阿姨')	
+}
+
+	});
+
+})
+
+
+</script>
+</head>
+
+<body>
+	<a id="a" href="www.baidu.com">链接</a>
+</body>
+
+</html>

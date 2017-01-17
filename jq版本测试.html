@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>srcElement</title>
+<style>
+*{margin:0; padding:0; }
+.table{border:1px solid #ddd; }
+.table tr{border-bottom:1px solid red; }
+</style>
+
+<script src="jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+    function hh() {          
+        var id = $(event.srcElement).attr("id");
+        alert(id)
+        $("input:text").val(id);
+    }
+</script>
+</head>
+
+<body>
+	<input id="Text1" type="text" />
+    <input id="Button1" type="button" value="button" onclick="hh();" />
+</body>
+</html>

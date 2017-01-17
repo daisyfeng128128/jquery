@@ -10,14 +10,12 @@
 </head>
 
 <body>
-  <input type="text" name="" class="a">
+  <input type="text" name="" class="a" disabled>
 
   <script>
     $(function(){
       // $('.a').attr('disabled','disabled');
-      $('.a').focus(function(){
-        $(this).blur();
-	  })
+      $('.a').removeAttr("disabled")
     })
 
   </script>

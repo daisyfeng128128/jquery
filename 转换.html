@@ -7,19 +7,16 @@
   .blue { background:blue; }
   </style>
   <script type="text/javascript" src="jquery-1.7.2.js"></script>
+  <script>
+  var a='{"b":1,"c":2}';
+  //jQuery.parseJSON(a)
+  //eval(a);
+  //a=JSON.parse(a);
+  var a=jQuery.parseJSON(a)
+  console.log(a.b)
+  </script>
 </head>
 
 <body>
-  <input type="text" name="" class="a">
-
-  <script>
-    $(function(){
-      // $('.a').attr('disabled','disabled');
-      $('.a').focus(function(){
-        $(this).blur();
-	  })
-    })
-
-  </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	$(".s").on("change",function(){
+		if ($(".s").val()==2) {
+			console.log("000")
+		}
+	})
+});
+</script>
+</head>
+<body>
+	<select class="s">
+		<option value="1">a</option>
+		<option value="2">b</option>
+		<option value="3">c</option>
+		<option value="4">d</option>
+	</select>
+</body>
+</html>
